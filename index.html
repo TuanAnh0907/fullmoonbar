@@ -1,0 +1,393 @@
+<html lang="">
+<head>
+    <title>Home</title>
+    <meta name="generator" content="Yahoo! SiteBuilder/2.3/1.5.0_02">
+    <script src="sitebuilder/scripts/layers.js"></script>
+    <script>
+        function randomSpeed(c) {
+            var result = random(10 * c.speed) / 100 + c.speed / 4;
+            return (result * c.direction);
+        }
+
+        function randomYOffset(c) {
+            return c.baseYOffset + random(2 * c.randomYOffset + 1) - c.randomYOffset;
+        }
+
+        function updateFlyby(c) {
+            if (!c.flyby) {
+                setTimeout('updateFlyby(c' + c.uid + ')', c.updateInterval);
+                return;
+            }
+            for (var i = 0; i < c.imageCount; i++) {
+                var name = c.prefix + i;
+                setVisible(name, true);
+                c.xOffset[name] += c.xSpeed[name];
+                var x = getViewXOffset() + c.xOffset[name];
+                var y = getViewYOffset() + c.yAnchor * (getViewHeight() - 1 - c.imageHeight) / 2 + c.yOffset[name] * (c.yAnchor === 2 ? -1 : 1);
+                if (outOfBounds(c, x, y, c.imageWidth, c.imageHeight)) {
+                    setVisible(name, false);
+                    c.flyby = false;
+                    setTimeout('c' + c.uid + '.flyby=true', c.minTime + random(c.randTime));
+                    c.xSpeed[name] = randomSpeed(c);
+                    if (c.xSpeed[name] < 0)		// going left
+                        c.xOffset[name] = getViewXOffset() + getViewWidth() + c.xFudge - c.imageWidth;
+                    else				// going right
+                        c.xOffset[name] = getViewXOffset() - c.xFudge;
+                    c.yOffset[name] = randomYOffset(c);
+                } else
+                    moveLayer(name, x, y);
+            }
+            setTimeout('updateFlyby(c' + c.uid + ')', c.updateInterval);
+        }
+    </script>
+
+    <style type="text/css"><!--
+    body {
+        font-family: "Calisto MT", serif;
+        font-size: 16px;
+    }
+
+    P {
+        font-family: "Calisto MT", serif;
+        font-size: 16px;
+    }
+
+    form {
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+</head>
+<body bgcolor="#FCF7E2" text="#2B6FC4" link="#474754" vlink="#6AC6E3">
+
+<div style="position: relative; width: 800px; margin: auto">
+
+    <div id="e0" style="position:absolute;left:1px;top:0;width:800px;height:182px;">
+        <!--$img %RemappedImageAsset:/sitebuilder/clipart/bars/regular/horizontal/goldShadowsBlur.jpg$--><img
+        src="/clipart/pageHeaders/goldShadowsBlur.jpg" width="790" height="182" alt=""></div>
+
+    <div id="e1" style="position:absolute;left:55px;top:228px;width:615px;height:176px;">
+        <table border="0" cellspacing="0" cellpadding="0" width="615">
+            <tr>
+                <td nowrap height="176" align="center" valign="top"><span class="text"><b><font size="4"><span
+                    style="font-size:18px;line-height:22px;">Welcome to the Full Moon Bar and Grill<br>Located at 113. S Batavia Ave (Rt 31)<br>In Batavia, IL<br>Just one block South of Wilson Ave.<br><br>The Full Moon Bar and Grill is a full service neighborhood establishment! &nbsp;<br
+                    soft>We offer our customers full bar service, a sandwich lunch menu with our <br soft>famous pub burger and food service until close!<br
+                    soft></span></font></b></span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="e2" style="position:absolute;left:152px;top:427px;width:498px;height:379px;">
+        <table border="0" cellspacing="0" cellpadding="0" width="498">
+            <tr>
+                <td nowrap height="379">
+                <span class="text">
+                    <span style="font-size:16px;line-height:19px;"><br></span>
+                    <table cellspacing=0 cellpadding=0 border=0 style="margin:0;">
+                        <tr>
+                            <td width=40 align=right>
+                                <img src="/clipart/bullets/starGold.gif">
+                            <td width=3><td>
+                            <b>
+                                <font face="Calisto MT" color="#2B6FC4" size="3">
+                                    <span style="font-size:16px;line-height:19px;">Full line of import and domestic bottled beers.</span>
+                                </font>
+                            </b>
+                            <b>
+                                <font face="Calisto MT" color="#2B6FC4" size="3">
+                                    <span style="font-size:16px;line-height:19px;"><br></span>
+                                </font>
+                            </b>
+                    </table>
+                    <b>
+                        <span style="font-size:16px;line-height:19px;"><br></span>
+                    </b>
+                    <table cellspacing=0 cellpadding=0 border=0 style="margin:0;">
+                        <tr>
+                            <td width=40 align=right>
+                                <img src="/clipart/bullets/starGold.gif" alt="">
+                            <td width=3>
+                            <td>
+                            <b>
+                                <font face="Calisto MT" color="#2B6FC4" size="3">
+                                    <span style="font-size:16px;line-height:19px;">Mixed drinks and Liqueurs to satisfy every taste.</span>
+                                </font>
+                            </b>
+                            <b>
+                                <font face="Calisto MT" color="#2B6FC4" size="3">
+                                    <span style="font-size:16px;line-height:19px;"><br></span>
+                                </font>
+                            </b>
+                    </table>
+                    <b>
+                        <span style="font-size:16px;line-height:19px;"><br></span>
+                    </b>
+                    <table cellspacing=0 cellpadding=0 border=0 style="margin:0;">
+                        <tr>
+                            <td width=40 align=right><img src="/clipart/bullets/starGold.gif" alt=""></td>
+                            <td width=3><td>
+                            <b>
+                                <font face="Calisto MT" color="#2B6FC4" size="3">
+                                    <span style="font-size:16px;line-height:19px;">Luncheon sandwich menu that features our signature 1/2 pound</span>
+                                </font>
+                            </b>
+                        </tr>
+                    </table>
+                </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span style="font-size:16px;line-height:19px;">Pub Burger, Rueben sandwich, fresh cut fries and much more.</span></font></b>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span
+                        style="font-size:16px;line-height:19px;"><br></span></font></b>
+                </td>
+            </tr>
+        </table>
+        <b><span style="font-size:16px;line-height:19px;"><br></span></b>
+        <table cellspacing=0 cellpadding=0 border=0 style="margin:0;">
+            <tr>
+                <td width=40 align=right><img src="/clipart/bullets/starGold.gif" alt=""></td>
+                <td width=3>
+                <td>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span style="font-size:16px;line-height:19px;">Pool table and Arcade games for those who like to play.</span></font></b>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span
+                        style="font-size:16px;line-height:19px;"><br></span></font></b>
+                </td>
+            </tr>
+        </table>
+        <b><span style="font-size:16px;line-height:19px;"><br></span></b>
+        <table cellspacing=0 cellpadding=0 border=0 style="margin: 0;">
+            <tr>
+                <td width=40 align=right><img src="/clipart/bullets/starGold.gif" alt=""></td>
+                <td width=3>
+                <td>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span style="font-size:16px;line-height:19px;">Daily drink and food specials.</span></font></b>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span
+                        style="font-size:16px;line-height:19px;"><br></span></font></b>
+                </td>
+            </tr>
+        </table>
+        <b><span style="font-size:16px;line-height:19px;"><br></span></b>
+        <table cellspacing=0 cellpadding=0 border=0 style="margin: 0;">
+            <tr>
+                <td width=40 align=right><img src="/clipart/bullets/starGold.gif" alt=""></td>
+                <td width=3>
+                <td>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span style="font-size:16px;line-height:19px;">Free Parking in rear lot.</span></font></b>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span
+                        style="font-size:16px;line-height:19px;"><br></span></font></b>
+                </td>
+            </tr>
+        </table>
+        <b><span style="font-size:16px;line-height:19px;"><br></span></b>
+        <table cellspacing=0 cellpadding=0 border=0 style="margin: 0;">
+            <tr>
+                <td width=40 align=right><img src="/clipart/bullets/starGold.gif" alt=""></td>
+                <td width=3>
+                <td>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span style="font-size:16px;line-height:19px;">Wi-Fi Friendly Establishment.</span></font></b>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span
+                        style="font-size:16px;line-height:19px;"><br></span></font></b>
+                </td>
+            </tr>
+        </table>
+        <b><span style="font-size:16px;line-height:19px;"><br></span></b>
+        <table cellspacing=0 cellpadding=0 border=0 style="margin: 0;">
+            <tr>
+                <td width=40 align=right><img src="/clipart/bullets/starGold.gif" alt=""></td>
+                <td width=3>
+                <td>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span style="font-size:16px;line-height:19px;">Carry out service for beer, spirits and food</span></font></b>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span style="font-size:16px;line-height:19px;"> until close</span></font></b>
+                    <b><font face="Calisto MT" color="#2B6FC4" size="3"><span
+                        style="font-size:16px;line-height:19px;">.</span></font></b>
+                </td>
+            </tr>
+            <tr>
+        </table>
+    </div>
+
+    <div id="e3" style="position:absolute;left:660px;top:305px;width:255px;height:347px;">
+        <img src="sitebuilder/images/P4110021-255x347.jpg" width="255" height="347" alt=""></div>
+
+    <div id="e4" style="position:absolute;left:10px;top:389px;width:131px;height:348px;">
+        <table border="0" cellspacing="0" cellpadding="0" width="131">
+            <tr>
+                <td nowrap height="348" valign="top" bgcolor="#F9F9FC"><!--$emptyText$--></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="e5" style="position:absolute;left:1px;top:73px;width:54px;height:282px;">
+        <img src="/clipart/images/glassYellowGreen.gif" width="54" height="282" alt=""></div>
+
+    <div id="e6" style="position:absolute;left:15px;top:120px;width:752px;height:50px;">
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td><a href="index.html">
+                    <img name="i7" src="sitebuilder/images/navbar-0-active-69203.png" width="150" height="50" border="0"
+                         alt=""/>
+                </a>
+                </td>
+                <td><a href="aboutus.html">
+                    <img name="i8" src="sitebuilder/images/navbar-1-inactive-69265.png" border="0" width="150"
+                         height="50"
+                         alt=""/></a>
+                </td>
+                <td><a href="upcoming.html">
+                    <img name="i9" src="sitebuilder/images/navbar-2-inactive-36640.png" border="0" width="150"
+                         height="50"
+                         alt=""/></a>
+                </td>
+                <td><a href="photo.html">
+                    <img name="i10" src="sitebuilder/images/navbar-3-inactive-36843.png" border="0" width="150"
+                         height="50"
+                         alt=""/></a>
+                </td>
+                <td><a href="contactus.html">
+                    <img name="i11" src="sitebuilder/images/navbar-4-inactive-37062.png" border="0" width="152"
+                         height="50"
+                         alt=""/></a>
+                </td>
+            <tr>
+        </table><!--$end exclude$--></div>
+
+    <div id="e12" style="position:absolute;left:94px;top:24px;width:519px;height:86px;">
+        <table border="0" cellspacing="0" cellpadding="0" width="519">
+            <tr>
+                <td nowrap height="86" align="center">
+                    <map name="imageText12"></map>
+                    <img border=0 src="sitebuilder/images/index.html-1.png" width="519" height="86"
+                         usemap="#imageText12"
+                         alt="">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="e13" style="position:absolute;left:15px;top:120px;width:752px;height:50px;">
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td><a href="index.html">
+                    <img name="i14" src="sitebuilder/images/navbar-0-active-69203.png" width="150" height="50"
+                         border="0" alt=""/></a>
+                </td>
+                <td><a href="aboutus.html">
+                    <img name="i15" src="sitebuilder/images/navbar-1-inactive-69265.png" border="0" width="150"
+                         height="50" alt=""/></a>
+                </td>
+                <td><a href="upcoming.html">
+                    <img name="i16" src="sitebuilder/images/navbar-2-inactive-36640.png" border="0" width="150"
+                         height="50" alt=""/></a>
+                </td>
+                <td><a href="photo.html">
+                    <img name="i17" src="sitebuilder/images/navbar-3-inactive-36843.png" border="0" width="150"
+                         height="50" alt=""/></a>
+                </td>
+                <td><a href="contactus.html">
+                    <img name="i18" src="sitebuilder/images/navbar-4-inactive-37062.png" border="0" width="152"
+                         height="50" alt=""/></a>
+                </td>
+            <tr>
+        </table>
+    </div>
+
+    <div id="e19" style="position:absolute;left:112px;top:41px;width:40px;height:32px;">
+    <span class="text"><b><font face="Tempus Sans ITC" color="#FCF7E1" size="4"><span
+        style="font-size:22px;line-height:30px;">the<br soft></span></font></b>
+    </span>
+    </div>
+
+    <div id="e20" style="position:absolute;left:20px;top:48px;width:21px;height:19px;">
+        <img src="/clipart/bullets/starGold.gif" width="21" height="19" alt="">
+    </div>
+
+    <div id="e21" style="position:absolute;left:2px;top:20px;width:21px;height:19px;">
+        <!--$img %RemappedImageAsset:/sitebuilder/clipart/bullets/misc/starGold.gif$-->
+        <img src="/clipart/bullets/starGold.gif" width="21" height="19" alt="">
+    </div>
+
+    <div id="e22" style="position:absolute;left:21px;top:407px;width:111px;height:315px;">
+        <table border="0" cellspacing="0" cellpadding="0" width="111">
+            <tr>
+                <td nowrap height="315" align="center" valign="top" bgcolor="#4949C4">
+                <span class="text">
+                    <span style="font-size:16px;line-height:19px;"><br><br><br></span>
+                    <b><font face="Tempus Sans ITC" color="#FCF7E1" size="4">
+                        <span style="font-size:18px;line-height:25px;">Click here <br soft>for Daily</span>
+                    </font></b>
+                    <a href="specials.html"><b><font face="Tempus Sans ITC" color="#FCF7E1" size="5">
+                        <span style="font-size:24px;line-height:33px;"> <br soft>DRINK<br></span></font></b>
+                    </a>
+                    <a href="specials.html">
+                        <b><font face="Tempus Sans ITC" color="#FCF7E1" size="5">
+                        <span style="font-size:24px;line-height:33px;">&amp;<br></span></font></b>
+                    </a>
+                    <a href="specials.html">
+                        <b><font face="Tempus Sans ITC" color="#FCF7E1" size="5">
+                            <span style="font-size:24px;line-height:33px;">MENU <br soft></span></font></b>
+                    </a>
+                    <a href="specials.html">
+                        <b><font face="Tempus Sans ITC" color="#FCF7E1" size="5">
+                        <span style="font-size:24px;line-height:33px;">SPECIAL</span></font></b>
+                    </a>
+                    <a href="specials.html"><b><font face="Tempus Sans ITC" color="#FCF7E1" size="5"><span
+                        style="font-size:24px;line-height:33px;">S<br soft></span></font></b>
+                    </a>
+                </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="e28" style="position:absolute;left:76px;top:183px;width:616px;height:43px">
+        <table border="0" cellspacing="0" cellpadding="0" width="616">
+            <tr>
+                <td nowrap height="43" align="center" valign="top">
+                <span class="text">
+                    <span style="font-size: x-large; ">
+                        <span style="font-size:30px;line-height:35px;">
+                            Open till 2am everyday of the week !!!<br soft></span>
+                    </span>
+                </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<script>
+    if (layerSupport()) {
+        c0 = new config();
+        c0.uid = 0;
+        c0.prefix = "y_flyby0";
+        c0.image = "/clipart/images/constelationStars.gif";
+        c0.imageCount = 1
+        c0.imageWidth = 220;
+        c0.imageHeight = 117;
+        c0.yAnchor = 1;
+        c0.xSpeed = new Array();
+        c0.speed = 4
+        c0.direction = -1;
+        c0.minTime = 4000 / 3;
+        c0.randTime = 2 * 4000 / 3;
+        c0.xOffset = new Array();
+        c0.yOffset = new Array();
+        c0.flyby = true;
+        c0.baseYOffset = 50;
+        c0.randomYOffset = 50;
+        for (var i = 0; i < c0.imageCount; i++) {
+            var name = c0.prefix + i;
+            c0.xOffset[name] = -c0.xFudge + random(getViewWidth() + c0.xFudge);
+            c0.yOffset[name] = randomYOffset(c0);
+            c0.xSpeed[name] = randomSpeed(c0);
+            writeImage(c0.image, c0.prefix + i, -1000, -1000);
+        }
+        setTimeout('updateFlyby(c0)', c0.updateInterval);
+    }
+</script>
+
+</body>
+</html>
