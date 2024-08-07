@@ -1,5 +1,6 @@
-<html lang="">
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Home</title>
     <meta name="generator" content="Yahoo! SiteBuilder/2.3/1.5.0_02">
     <script src="sitebuilder/scripts/layers.js"></script>
@@ -41,21 +42,57 @@
         }
     </script>
 
-    <style type="text/css"><!--
-    body {
-        font-family: "Calisto MT", serif;
-        font-size: 16px;
-    }
+    <style type="text/css">
+        body {
+            font-family: "Calisto MT", serif;
+            font-size: 16px;
+        }
 
-    P {
-        font-family: "Calisto MT", serif;
-        font-size: 16px;
-    }
+        P {
+            font-family: "Calisto MT", serif;
+            font-size: 16px;
+        }
 
-    form {
-        margin: 0;
-        padding: 0;
-    }
+        form {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            width: 150px;
+            margin: 0;
+        }
+
+        .dropdown-content ul {
+            background: #dede78;
+            padding-inline-start: 5px !important;
+            padding: 5px;
+        }
+
+        .dropdown-content li {
+            list-style: none;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-content li > a {
+            color: dodgerblue;
+        }
+
+        .dropdown-content li > a:hover {
+            color: #9c0000;
+        }
+
     </style>
 </head>
 <body bgcolor="#FCF7E2" text="#2B6FC4" link="#474754" vlink="#6AC6E3">
@@ -64,7 +101,7 @@
 
     <div id="e0" style="position:absolute;left:1px;top:0;width:800px;height:182px;">
         <!--$img %RemappedImageAsset:/sitebuilder/clipart/bars/regular/horizontal/goldShadowsBlur.jpg$--><img
-        src="/clipart/pageHeaders/goldShadowsBlur.jpg" width="790" height="182" alt=""></div>
+        src="/clipart/pageHeaders/goldShadowsBlur.jpg" width="920" height="182" alt=""></div>
 
     <div id="e1" style="position:absolute;left:55px;top:228px;width:615px;height:176px;">
         <table border="0" cellspacing="0" cellpadding="0" width="615">
@@ -206,6 +243,52 @@
             </tr>
             <tr>
         </table>
+
+        <section style="margin-top:20px; padding: 10px">
+            <h2 style="color: #2E8B57; font-weight: bolder; font-size: 25px">Bài viết mới nhất</h2>
+            <ul class="list-articles" style="list-style: none; padding: 0">
+                <li class="article-item">
+                    <a href="https://amthucbinhxuyen.com/post/tong-hop-16-quan-nhau-tai-phuong-4-quan-10.p664">
+                        Tổng hợp 16 quán nhậu tại Phường 4 Quận 10
+                    </a>
+                </li>
+                <li class="article-item">
+                    <a href="https://amthucbinhxuyen.com/post/tong-hop-11-quan-tra-sua-tai-phuong-4-quan-10.p663">
+                        Tổng hợp 11 quán trà sữa tại Phường 4 Quận 10
+                    </a>
+                </li>
+                <li class="article-item">
+                    <a href="https://amthucbinhxuyen.com/post/top-17-quan-cafe-tai-phuong-15-quan-4.p662">
+                        Top 17 quán cafe tại Phường 15 Quận 4
+                    </a>
+                </li>
+                <li class="article-item">
+                    <a href="https://amthucbinhxuyen.com/post/top-11-quan-nhau-tai-phuong-8-quan-11.p661">
+                        Top 11 quán nhậu tại Phường 8 Quận 11
+                    </a>
+                </li>
+                <li class="article-item">
+                    <a href="https://amthucbinhxuyen.com/post/danh-sach-10-quan-an-sang-tai-phuong-5-quan-6.p660">
+                        Danh sách 10 quán ăn sáng tại Phường 5 Quận 6
+                    </a>
+                </li>
+                <li class="article-item">
+                    <a href="https://amthucbinhxuyen.com/post/danh-sach-13-quan-nhau-tai-phuong-5-quan-6.p659">
+                        Danh sách 13 quán nhậu tại Phường 5 Quận 6
+                    </a>
+                </li>
+                <li class="article-item">
+                    <a href="https://amthucbinhxuyen.com/post/danh-sach-14-quan-nhau-tai-phuong-6-quan-6.p658">
+                        Danh sách 14 quán nhậu tại Phường 6 Quận 6
+                    </a>
+                </li>
+                <li class="article-item">
+                    <a href="https://amthucbinhxuyen.com/post/top-15-quan-cafe-tai-phuong-5-quan-6.p657">
+                        Top 15 quán cafe tại Phường 5 Quận 6
+                    </a>
+                </li>
+            </ul>
+        </section>
     </div>
 
     <div id="e3" style="position:absolute;left:660px;top:305px;width:255px;height:347px;">
@@ -249,6 +332,19 @@
                     <img name="i11" src="sitebuilder/images/navbar-4-inactive-37062.png" border="0" width="152"
                          height="50"
                          alt=""/></a>
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <img name="i11" src="sitebuilder/images/navbar-5-active-32142.png" border="0" width="152"
+                             height="50"
+                             alt=""/>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li><a href="#">Ha Noi</a></li>
+                                <li><a href="#">Ho Chi Minh City</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </td>
             <tr>
         </table><!--$end exclude$--></div>
@@ -355,7 +451,6 @@
             </tr>
         </table>
     </div>
-
 </div>
 
 <script>
